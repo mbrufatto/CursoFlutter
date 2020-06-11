@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "460242648579",
+    "firebase_url": "https://lojaflutter-c9c47.firebaseio.com",
+    "project_id": "lojaflutter-c9c47",
+    "storage_bucket": "lojaflutter-c9c47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460242648579:android:24627fe82a0bc1169b9836",
+        "android_client_info": {
+          "package_name": "br.com.mantratech.lojavirtual"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460242648579-u11geg9qg72a6c0p5cfuiidemoo4l739.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD84OPCT5ibEjLu_2Zu93yI-4m87ycAJqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460242648579-u11geg9qg72a6c0p5cfuiidemoo4l739.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
