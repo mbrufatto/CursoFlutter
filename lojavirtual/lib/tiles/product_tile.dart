@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lojavirtual/datas/product_data.dart';
-import 'package:lojavirtual/screens/products_screen.dart';
 import 'package:lojavirtual/screens/product_screen.dart';
 
 class ProductTile extends StatelessWidget {
