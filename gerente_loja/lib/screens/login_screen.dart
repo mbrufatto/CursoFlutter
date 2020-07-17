@@ -109,7 +109,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ]);
+              default:
+                return Container();
             }
+
           }),
     );
   }
