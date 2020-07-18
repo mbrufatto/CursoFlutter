@@ -16,6 +16,7 @@ class ImagesWidget extends FormField<List> {
     autovalidate: autoValidade,
     builder: (state) {
       return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             height: 124,
@@ -48,6 +49,7 @@ class ImagesWidget extends FormField<List> {
                         builder: (context) => ImageSourceSheet(
                           onImageSelected: (image){
                             state.didChange(state.value..add(image));
+                            Navigator.of(context).pop();
                           },
                         )
                     );
