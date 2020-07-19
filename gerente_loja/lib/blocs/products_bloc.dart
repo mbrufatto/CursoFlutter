@@ -51,6 +51,10 @@ class ProductBloc extends BlocBase {
     unsavedData["images"] = images;
   }
 
+  void saveSizes(List sizes){
+    unsavedData["sizes"] = sizes;
+  }
+
   Future<bool> saveProduct() async {
     _loadingController.add(true);
 
@@ -93,6 +97,13 @@ class ProductBloc extends BlocBase {
 
   void deleteProduct() {
     product.reference.delete();
+    List<dynamic> imageListUrl = List.of(product.data["images"]);
+    for (int i = 0; i < imageListUrl.length; i++) {
+      FirebaseStorage.instance
+          .getReferenceFromUrl(imageListUrl[i])
+          .then((reference) => reference.delete())
+          .catchError((e) => print(e));
+    }
   }
 
   @override
