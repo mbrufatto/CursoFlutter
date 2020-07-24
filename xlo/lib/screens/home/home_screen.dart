@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:xlo/blocs/home_bloc.dart';
 import 'package:xlo/common/custom_drawer/custom_drawer.dart';
+import 'package:xlo/models/ad.dart';
+import 'package:xlo/screens/home/widgets/product_tile.dart';
 import 'package:xlo/screens/home/widgets/search_dialog.dart';
 import 'package:xlo/screens/home/widgets/top_bar.dart';
 
@@ -83,8 +85,23 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       drawer: CustomDrawer(),
       body: Column(
-        children: [
-          TopBar()
+        children: <Widget>[
+          TopBar(),
+          Expanded(
+            child: StreamBuilder<List<Ad>>(
+              stream: _homeBloc.outAd,
+              builder: (context, snapshot){
+                if(snapshot.data == null)
+                  return Container();
+                return ListView.builder(
+                  itemCount: snapshot.data.length,
+                  itemBuilder: (context, index){
+                    return ProductTile(snapshot.data[index]);
+                  },
+                );
+              },
+            ),
+          )
         ],
       ),
     );

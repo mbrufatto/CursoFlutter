@@ -29,7 +29,7 @@ dependencies:
   intl_translation: ^0.17.7
   rxdart: ^0.23.1
   brasil_fields: ^0.0.7+2
-  image_picker: ^0.6.2+3
+  image_picker: '0.6.2+3'
   cached_network_image: ^2.0.0-rc
   parse_server_sdk: ^1.0.24
   geolocator: ^5.1.5
@@ -43,7 +43,7 @@ dependencies:
   shared_preferences: ^0.5.6
   connectivity: ^0.4.6+1
   onesignal_flutter: ^2.0.2
-  image_cropper: ^1.1.1
+  image_cropper: '1.1.1'
   location_permissions: ^2.0.3
   dio: ^3.0.7
 
